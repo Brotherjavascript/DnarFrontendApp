@@ -14,12 +14,12 @@ const SideNav = () => {
 
                         <div className="nav_list">
 
-                            <a href="/#marketLeaders" className="nav_link">
+                            <a href="/#marketLeaders" className="nav_link active">
                                 <i className='bx bx-grid-alt nav_icon'/>
                                 <span className="nav_name">Market</span>
                             </a>
 
-                            <a href="/#dashboard" className="nav_link active">
+                            <a href="/#dashboard" className="nav_link">
                                 <i className='bx bx-bar-chart-alt-2 nav_icon'/>
                                 <span className="nav_name">Dashboard</span>
                             </a>
