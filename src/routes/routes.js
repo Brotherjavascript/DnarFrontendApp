@@ -4,7 +4,7 @@ import MarketUI from "../pages/market/MarketUI";
 
 
 const routes = [
-    { path: "/dashboard", name: "Dashboard", component: <DashboardUI/>},
-    { path: "/marketLeaders", name: "Market Leaders", component: <MarketUI/>}
+    { path: "/marketLeaders", name: "Market Leaders", component: <MarketUI/>},
+    { path: "/dashboard", name: "Dashboard", component: <DashboardUI/>}
 ];
 export default routes;
