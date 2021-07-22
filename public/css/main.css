@@ -275,6 +275,8 @@ a {
     background: var(--cardpillColor);
     margin-bottom: 1em;
     padding-top: 1em;
+    height: 8em;
+    overflow: scroll;
 }
 
 .coinPillText{
@@ -396,6 +398,15 @@ a {
     padding-left: 3em;
 }
 
+
+.loaderCard {
+    background: var(--lightBodyColor);
+    border: 1px solid var(--lightBodyColor);
+}
+
+.loaderImg{
+    width: 30em;
+}
 
 
 /*For Mobile*/

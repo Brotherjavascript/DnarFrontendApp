@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {_fetchAllCoins} from "../../config/Config";
+import {useEffect, useState} from 'react';
+import {_GetReq} from "../../config/Config";
 
 
 const useMarketLeaders = baseUrl => {
@@ -15,11 +15,31 @@ const useMarketLeaders = baseUrl => {
         {name: 'Jul', Rate: 150, pv: 1100, amt: 3400},
     ];
 
-    const _getCoins = () => {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [market, setMarket] = useState([]);
+
+
+    useEffect(() => {
+        async function AllMarket (){
+            _getMarket().then(res => {
+                const marketData = res.data;
+                console.log(marketData);
+                setMarket(marketData);
+                setIsLoading(true);
+            }).catch(err => {
+                console.error(err.message);
+            });
+        }
+
+        AllMarket().then();
+    }, []);
+
+    const _getMarket = () => {
         console.log(baseUrl.url);
-       return  _fetchAllCoins(baseUrl.url + 'coins/list');
+       return  _GetReq(baseUrl.url + 'indexes?per_page=100');
     };
 
-    return {_getCoins, data}
+    return {isLoading, data, market}
 };
 export default useMarketLeaders;

@@ -8,7 +8,7 @@ const MarketPillUI = (props) => {
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-lg-4 col-sm-12">
-                                    <p className="marketPillTitle">{props.coin.name} ({props.coin.symbol})</p>
+                                    <p className="marketPillTitle">{props.oneMarket.market} ({props.oneMarket.id})</p>
                                 </div>
 
                                 <div className="col-lg-3 col-sm-12">
@@ -22,7 +22,7 @@ const MarketPillUI = (props) => {
                                 </div>
 
                                 <div className="col-lg-3 col-sm-12">
-                                    <p className="marketPillPrice">$190,200.89</p>
+                                    <p className="marketPillPrice">$ {props.oneMarket.last === null ? 0.00 : props.oneMarket.last}</p>
                                 </div>
 
                             </div>

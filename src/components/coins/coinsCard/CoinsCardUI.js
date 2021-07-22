@@ -10,7 +10,7 @@ const CoinsCardUI = (props) => {
                             <p className="coinPillText">{props.coinName}</p>
                         </div>
                         <div className="col-4">
-                            <img src={process.env.PUBLIC_URL + props.imageName} className="coinImg"/>
+                            <span className="badge badge-primary">{props.symbol}</span>
                         </div>
                     </div>
                 </div>

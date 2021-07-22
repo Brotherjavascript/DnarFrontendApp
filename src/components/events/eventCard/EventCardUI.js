@@ -1,16 +1,15 @@
 import React from 'react';
 
-const EventCardUI = () => {
+const EventCardUI = (props) => {
     return(
         <>
             <div className="card marketPill">
                 <div className="card-body">
-                    <p className="eventCardTitle">Token2047 London</p>
+                    <p className="eventCardTitle">{props.event.title}</p>
                     <p className="eventCardBody">
-                        The href attribute requires a valid value to be accessible. Provide a valid,
-                        navigable address as the href value.
+                        {props.event.description.slice(0,200)} ...
                     </p>
-                    <button className="btn eventCardLink" ><i className="fa fa-link"/></button>
+                    <a href={props.event.website} target="_blank" className="btn eventCardLink" ><i className="fa fa-link"/></a>
                 </div>
             </div>
         </>

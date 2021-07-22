@@ -3,9 +3,9 @@ import MarketLeadersUI from "../../components/marketLeaders/MarketLeadersUI";
 import CoinsUI from "../../components/coins/CoinsUI";
 import EventsUI from "../../components/events/EventsUI";
 import {useSelector} from "react-redux";
-import MyLoader from "../../config/Loader";
 
 const MarketUI = (props) => {
+    const baseUrl = useSelector(state => state.dataAPI);
 
     return (
         <>
@@ -13,11 +13,11 @@ const MarketUI = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-sm-12">
-                            <MarketLeadersUI/>
-                            <CoinsUI/>
+                            <MarketLeadersUI baseUrl={baseUrl} />
+                            <CoinsUI baseUrl={baseUrl}/>
                         </div>
                         <div className="col-lg-4 col-sm-12">
-                            <EventsUI/>
+                            <EventsUI baseUrl={baseUrl}/>
                         </div>
                     </div>
                 </div>
